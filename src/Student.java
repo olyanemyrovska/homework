@@ -10,7 +10,10 @@ public class Student {
   }
   public static double getAvgRating(List<Student> students) {
     // TODO return average rating of all students
-  double sum = 0d;
+   if (students.isEmpty()){
+    return 0d;
+    }
+    double sum = 0d;
   for(int i=0; i<students.size(); i++) {
   sum = sum + students.get(i).rating;
     System.out.println(students.get(i).rating);
@@ -46,9 +49,9 @@ public class Student {
     return result;
   }
 
-  public void changeRating(int rating) {
+  public void changeRating(int newRating) {
     // TODO change this student's rating and average rating of all students
-    rating = this.rating;
+     setRating(newRating);
   }
 
   public static void removeStudent(Student student) {
