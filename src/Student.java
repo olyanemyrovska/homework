@@ -11,7 +11,7 @@ public class Student {
   public static double getAvgRating(List<Student> students) {
     // TODO return average rating of all students
   double sum = 0d;
-  for (int i=0; i<students.size(); i++){
+  for(int i=0; i<students.size(); i++) {
   sum = sum + students.get(i).rating;
     System.out.println(students.get(i).rating);
   }
